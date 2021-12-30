@@ -3,8 +3,8 @@ all:
   hosts:
     chickenpi:
       ansible_host: chickenpi
-    # greenpi:
-    #   ansible_host: greenpi.local
+    turkeypi:
+      ansible_host: turkeypi
     # redpi:
     #   ansible_host: redpi.local
     # bluepi:
@@ -13,15 +13,16 @@ all:
     raspberry_pi:
       hosts:
         chickenpi: {}
+        turkeypi: {}
         # greenpi: {}
         # redpi: {}
         # bluepi: {}
     k3s_coordinator:
       hosts:
         chickenpi: {}
-    # k3s_worker:
-    #   hosts:
-    #     greenpi: {}
+    k3s_worker:
+      hosts:
+        turkeypi: {}
     #     redpi: {}
     #     bluepi: {}
     monitoring_server:
