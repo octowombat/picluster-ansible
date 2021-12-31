@@ -5,26 +5,25 @@ all:
       ansible_host: chickenpi
     turkeypi:
       ansible_host: turkeypi
-    # redpi:
-    #   ansible_host: redpi.local
-    # bluepi:
-    #   ansible_host: bluepi.local
+    steakpi:
+      ansible_host: steakpi
+    porkpi:
+      ansible_host: porkpi
   children:
     raspberry_pi:
       hosts:
         chickenpi: {}
         turkeypi: {}
-        # greenpi: {}
-        # redpi: {}
-        # bluepi: {}
+        steakpi: {}
+        porkpi: {}
     k3s_coordinator:
       hosts:
         chickenpi: {}
     k3s_worker:
       hosts:
         turkeypi: {}
-    #     redpi: {}
-    #     bluepi: {}
+        steakpi: {}
+        porkpi: {}
     monitoring_server:
       hosts:
         chickenpi: {}
